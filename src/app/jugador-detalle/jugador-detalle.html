@@ -1,1 +1,20 @@
-<p>jugador-detalle works!</p>
+<div *ngIf="jugador; else notFound" class="detail-container">
+    <a routerLink="/jugadores" class="btn btn-secondary mb-2">&larr; Volver</a>
+    <div class="detail-card">
+        <div class="detail-header">
+            <h1>{{ jugador.nombre }}</h1>
+        </div>
+        <div class="detail-body">
+            <p><strong>Equipo:</strong> {{ jugador.equipo }}</p>
+            <p><strong>Posición:</strong> {{ jugador.posicion }}</p>
+            <p class="desc">Una verdadera leyenda del fútbol mundial.</p>
+        </div>
+    </div>
+</div>
+
+<ng-template #notFound>
+    <div class="not-found">
+        <h2>Jugador no encontrado</h2>
+        <a routerLink="/jugadores" class="btn">Volver a la lista</a>
+    </div>
+</ng-template>

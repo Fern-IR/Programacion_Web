@@ -1,0 +1,52 @@
+.detail-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.detail-card {
+    background: white;
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.detail-header {
+    background: var(--primary-color);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.detail-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.detail-body {
+    padding: 2rem;
+    font-size: 1.2rem;
+}
+
+.mb-2 {
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.not-found {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* Visual improvements */
+.detail-container{padding:1rem}
+.detail-card{display:flex;flex-direction:column}
+.detail-media{background:linear-gradient(135deg,rgba(11,116,222,0.12),rgba(11,116,222,0.04));padding:1.5rem;display:flex;gap:1rem;align-items:center}
+.player-avatar{width:120px;height:120px;border-radius:8px;background:linear-gradient(180deg,#fff,#f3f6fb);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--primary-color);font-size:1rem;border:1px solid rgba(0,0,0,0.04)}
+.detail-info{flex:1}
+.detail-body p{margin:0.5rem 0}
+
+@media (max-width:700px){
+    .detail-media{flex-direction:column;align-items:flex-start}
+    .player-avatar{width:100%;height:120px}
+}

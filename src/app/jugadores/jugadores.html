@@ -1,1 +1,14 @@
-<p>jugadores works!</p>
+<section class="header-section">
+    <h1>Jugadores Legendarios</h1>
+    <p>Los íconos que marcaron la historia.</p>
+</section>
+
+<section class="players-list">
+    <h2>Los mejores jugadores de la historia</h2>
+    <ul>
+        <li *ngFor="let j of jugadores" class="player-item">
+            <a [routerLink]="['/jugadores', j.id]">{{ j.nombre }}</a>
+            <span class="meta"> — {{ j.equipo }} ({{ j.posicion }})</span>
+        </li>
+    </ul>
+</section>
